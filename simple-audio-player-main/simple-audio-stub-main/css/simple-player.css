@@ -1,0 +1,45 @@
+body{
+    background-image: url(../images/blue-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    user-select: none;
+    padding-bottom: 3px;
+}
+#container{
+    width: 330px;
+    height: 50px;
+    background-color: #bee0d8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#play-pause-button{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#current-time{
+    width: 45px;
+    padding-left: 5px;
+}
+#time-divider{
+    padding-left: 10px;
+}
+#total-time{
+    width: 45px;
+    padding-left: 10px;
+}
+#seek-bar{
+    width: 150px;
+    cursor: pointer;
+    margin-left: 10px;
+}
