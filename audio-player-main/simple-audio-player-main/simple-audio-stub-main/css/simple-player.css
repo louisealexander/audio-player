@@ -1,0 +1,74 @@
+body{
+    background-image: url(../images/blue-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    user-select: none;
+    padding-bottom: 3px;
+}
+#container{
+    width: 99.9%;
+    height: 50px;
+    background-color: #bee0d8;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.flex-image{
+    box-sizing: border-box;
+    float: left;
+    border-radius: 25px;
+    width: 33.3333333333%;
+    padding: 5px;
+}
+.flex-image:hover{
+    border-style: solid;
+    border-color: blue;
+
+    scale: 90%;
+}
+#play-pause-button{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#current-time{
+    width: 45px;
+    padding-left: 5px;
+}
+#time-divider{
+    padding-left: 10px;
+}
+#total-time{
+    width: 45px;
+    padding-left: 10px;
+}
+#seek-bar{
+    width: 99.9%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background-color: cornflowerblue; /* Blue background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+#audio_player{
+    width: 100%;
+}

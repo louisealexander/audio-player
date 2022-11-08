@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Player </title>
+    <link rel="stylesheet" href="css/simple-player.css"/>
+    <script src="js/simple-player.js" defer>
+    </script>
+    <script>
+        function change_audio_file()
+        {
+          var file_list = document.getElementById('audio_list') ;
+          var file_to_play = file_list.options[ file_list.selectedIndex ].value ;
+          var player = document.getElementById('audio_player');
+          player.src = file_to_play ;
+        }
+        </script>
+        <form>
+        <label for="audio_list">
+        Select an audio clip to load into the player. Then click the Play button on the player to start it.
+        </label>
+        <select onchange="change_audio_file();" id="audio_list">
+        <option selected value="audio/BLEACH_(getmp3.pro).mp3">BLEACH</option>
+        <option value="audio/TAPE_(getmp3.pro).mp3">TAPE</option>
+        <option value="audio/SUGAR_-_BROCKHAMPTON_(getmp3.pro).mp3">SUGAR</option>
+        </select>
+        </form>
+        <div id="audio_container">
+            <audio controls id="audio_player" src="audio/BLEACH_(getmp3.pro).mp3">
+            <audio controls id="audio_player" src="audio/TAPE_(getmp3.pro).mp3">
+            <audio controls id="audio_player" src="audio/SUGAR_-_BROCKHAMPTON_(getmp3.pro).mp3"></audio>
+                </audio>
+            <div style="border: 1px solid black ; padding: 8px ;">
+            Sorry, your browser does not support this audio player.
+            </div>
+            </audio>
+            </div>
+        <span class="volumeScaleHolder">
+            <span id="progressBar">
+                <span id="myVolume"></span>
+            </span>
+        </span>
+</head>
+<body>
+    <div id="row">
+        <!-- creates four individual columns optimised for desktop -->
+        <div id="col1" class="column">
+            <img class="flex-image" src="images/ginger.jpeg"/>
+        </div>
+        <div id="col2" class="column">
+            <img class="flex-image" src="images/iridescence.png"/>
+        </div>
+        <div id="col3" class="column">
+            <img class="flex-image" src="images/saturation.png"/>
+        </div>
+    <div id="container">
+        <img id="play-pause-button" src="images/play.svg">
+        <h4 id="current-time">0:00</h4>
+        <h4 id="time-divider">/</h4>
+        <h4 id="total-time">0:00</h4>
+        <input id="seek-bar" class="slider" type="range" min="0" value="0" disabled/>
+    </div>
+</body>
+</html>
