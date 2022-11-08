@@ -3,15 +3,15 @@ const currentTime = document.getElementById('current-time');
 const totalTime = document.getElementById('total-time');
 const playPauseButton = document.getElementById('play-pause-button');
 const seekBar = document.getElementById('seek-bar');
-// const audio = new Audio("audio/Soft-Background-for-Interview.webm");
-// let isSeeking = false;
-// playPauseButton.onclick = function(){
-//     if(audio.paused){
-//         audio.play();
-//     }else{
-//         audio.pause();
-//     }
-// }
+const audio = new Audio("audio/Soft-Background-for-Interview.webm");
+let isSeeking = false;
+playPauseButton.onclick = function(){
+    if(audio.paused){
+        audio.play();
+    }else{
+        audio.pause();
+    }
+}
 //AUDIO EVENT LISTENERS
 // event triggered once audio loaded
 audio.oncanplaythrough = function(){
@@ -76,17 +76,3 @@ function formatTime(secs) {
         return minutes + ":" + seconds;
     }
 }
-//VOLUME SLIDER
-//
-let audio = document.getElementById("audio_player");
-let audioVolumeBar = document.getElementById("progressBar");
-let myVolumeBar = document.getElementById("myVolume");
-var audioVolume = audio.volume;
-
-console.log(audioVolume);
-
-function updateVolume(){
-    myVolumeBar.style.width = audioVolume * 100 + '%';
-}
-
-updateVolume();

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Player </title>
+    <link rel="stylesheet" href="css/simple-player.css" />
+    <script src="js/simple-player.js" defer>
+    </script>
+</head>
+
+<body>
+
+    <div id="row">
+        <!-- creates four individual columns optimised for desktop -->
+        <div id="col1" class="column">
+            <img class="flex-image" src="images\UnknownMortalOrchestra.jpg" onclick="changeAudio()"/>
+        </div>
+        <div id="col2" class="column">
+            <img class="flex-image" src="images/stevelacy.jpg" onclick="changeAudio1()"/>
+        </div>
+        <div id="col3" class="column">
+            <img class="flex-image" src="images/laurynhill.jpg" onclick="changeAudio2()"/>
+        </div>
+
+    <div id="container">
+        <img id="play-pause-button" src="images/play.svg">
+        <h4 id="current-time">0:00</h4>
+        <h4 id="time-divider">/</h4>
+        <h4 id="total-time">0:00</h4>
+        <input id="seek-bar" class="slider" type="range" min="0" value="0" disabled />
+    </div>
+
+    <div id="volumeContainer">
+        <input type="range" id="volumeSlider" max="100" value="100">
+    </div>
+
+</body>
+</html>
